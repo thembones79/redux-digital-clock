@@ -14,9 +14,9 @@ const INITIAL_STATE = {
 function reducer(state = INITIAL_STATE, action) {
   switch (action.type) {
     case INCREASE_HOUR:
-      return { ...state, hour: state.hour + 1 };
+      return { ...state, hour: (state.hour + 1) % 24 };
     case INCREASE_MINUTE:
-      return { ...state, hour: state.minute + 1 };
+      return { ...state, minute: (state.minute + 1) % 60 };
     default:
       return state;
   }

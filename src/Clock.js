@@ -16,7 +16,7 @@ const Clock = ({ hour, minute, increaseHour, increaseMinute }) => {
           <p className="digit-font">:</p>
         </div>
         <div className="digits">
-          <p className="digit-font">{minute}</p>
+          <p className="digit-font">{`${minute < 10 ? "0" : ""}${minute}`}</p>
         </div>
       </div>
       <div className="controls">
